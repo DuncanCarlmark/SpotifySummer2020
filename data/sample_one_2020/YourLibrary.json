@@ -1,0 +1,44 @@
+{
+  "tracks": [
+    {
+      "artist": "Michael Bublé",
+      "album": "Christmas",
+      "track": "Michael's Christmas Greeting - Hidden Track"
+    }
+  ],
+  "albums": [
+  ],
+  "shows": [
+    {
+      "name": "Always Open",
+      "publisher": "Rooster Teeth"
+    },
+    {
+      "name": "On The Spot",
+      "publisher": "Rooster Teeth"
+    },
+    {
+      "name": "Reply All",
+      "publisher": "Gimlet"
+    },
+    {
+      "name": "Rooster Teeth Podcast",
+      "publisher": "Rooster Teeth"
+    },
+    {
+      "name": "Sportsball",
+      "publisher": "Rooster Teeth"
+    },
+    {
+      "name": "Stuff You Should Know",
+      "publisher": "iHeartRadio"
+    }
+  ],
+  "episodes": [
+  ],
+  "bannedTracks": [
+  ],
+  "other": [
+    "spotify:local:%E6%BE%A4%E9%87%8E%E5%BC%98%E4%B9%8B:%E4%B8%83%E3%81%A4%E3%81%AE%E5%A4%A7%E7%BD%AA+%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%83%BB%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF+NANATSU+NO+TAIZAI:Perfect+Time:283"
+  ]
+}
