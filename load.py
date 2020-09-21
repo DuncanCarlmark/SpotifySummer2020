@@ -144,7 +144,7 @@ streamingHistory = []
 fileName = 'sample_one_2020'
 for f in os.listdir('data/'+fileName):
     if f.startswith('StreamingHistory'):
-        streamingHistory.append(pd.read_json(os.path.join('data/data_2019', f)))
+        streamingHistory.append(pd.read_json(os.path.join('data/'+fileName, f)))
     
         
 rawHist = pd.concat(streamingHistory).reset_index(drop=True)
