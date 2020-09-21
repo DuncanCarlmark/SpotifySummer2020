@@ -23,8 +23,11 @@ from requests.exceptions import SSLError
 client_id = 'f78a4f4cfe9c40ea8fe346b0576e98ea'
 client_secret = 'c26db2d4c1fb42d79dc99945b2360ab4'
 
-# Debug off by default
+
+# File Input
+fileName = 'sample_one_2020'
 debug = True
+
 
 # Rough client for simplifying API calls
 class SpotifyAPI(object):
@@ -95,10 +98,10 @@ class SpotifyAPI(object):
         data = urlencode({'q': item, 'type':'track'})
 
         lookup_url = f'{endpoint}?{data}'
-        print(lookup_url)
+        # print(lookup_url)
 
         r = requests.get(lookup_url, headers=headers)
-        print(r.status_code)
+        # print(r.status_code)
         return r.json()
     
     def searchAlbum(self, item):
@@ -141,7 +144,7 @@ client.auth()
 
 # Set Up Streaming History
 streamingHistory = []
-fileName = 'sample_one_2020'
+
 for f in os.listdir('data/'+fileName):
     if f.startswith('StreamingHistory'):
         streamingHistory.append(pd.read_json(os.path.join('data/'+fileName, f)))
@@ -178,7 +181,16 @@ while i < len(artists):
         painCount += 1
         if debug:
             print("SSL ERROR: i UNCHANGED")
+
+    except ConnectionError:
+        painCount += 1
+        if debug:
+            print("CONNECTION ERROR: i UNCHANGED")
         
 if debug:           
     print(painCount)
 
+genreKey = dict(zip(artists, genreList))
+dfGenres = pd.DataFrame({'artistName':artists, 'genres':genreList})
+dfGenres.to_csv('genre_key_'+fileName+'.csv', index=False)
+rawHist.to_csv('totalHist_'+fileName+'.csv', index=False)
