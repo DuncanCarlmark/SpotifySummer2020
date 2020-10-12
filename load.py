@@ -17,6 +17,8 @@ import datetime
 import time
 
 from requests.exceptions import SSLError
+from requests.exceptions import ConnectionError
+
 
 
 #Client identification for API requests
@@ -25,7 +27,7 @@ client_secret = 'c26db2d4c1fb42d79dc99945b2360ab4'
 
 
 # File Input
-fileName = 'sample_one_2020'
+fileName = 'sample_2_2020'
 debug = True
 
 
