@@ -45,8 +45,10 @@ class SpotifyAPI(object):
         '''
         client_id = self.client_id
         client_secret = self.client_secret
+
         if client_id == None or client_secret == None:
             raise Exception("Must set client_id and client_secret")
+        
         client_creds = f'{client_id}:{client_secret}'
         client_creds_b64 = base64.b64encode(client_creds.encode())
         return client_creds_b64.decode()
